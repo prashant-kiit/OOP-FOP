@@ -17,9 +17,9 @@ public class ContainerConfiguration {
             field.setAccessible(true);
             Object methodImplementation = field.get(method);
             System.out.println("Type : " + methodImplementation.getClass());
-            System.out.println(field.getAnnotation(Route.class).routeName());
+            System.out.println(field.getAnnotation(Route.class).name());
             System.out.println(methodImplementation);
-            container.getContainer().put(field.getAnnotation(Route.class).routeName(), methodImplementation);
+            container.getContainer().put(field.getAnnotation(Route.class).name(), methodImplementation);
         }
     }
 }
